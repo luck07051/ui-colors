@@ -108,10 +108,10 @@ hi! link IncSearch Search
 call s:HL('Visual',         s:c.none,   s:c.b3)
 
 "===== Diff ====="
-"call s:HL('DiffAdd',       s:c.white,  s:c.green)
-"call s:HL('DiffChange',    s:c.white,  s:c.cyan)
-"call s:HL('DiffDelete',    s:c.white,  s:c.bred)
-"call s:HL('DiffText',      s:c.white,  s:c.red)
+call s:HL('DiffAdd',       s:c.green,   s:c.none)
+call s:HL('DiffChange',    s:c.blue,    s:c.none)
+call s:HL('DiffDelete',    s:c.red,     s:c.none)
+call s:HL('DiffText',      s:c.yellow,  s:c.none)
 
 "===== Spell ====="
 "call s:HL('SpellBad',      s:c.none,   s:c.none, 'underline')
@@ -136,7 +136,7 @@ call s:HL('Todo',       s:c.yellow, s:c.none, 'bold')
 call s:HL('Error',      s:c.red,    s:c.none, 'bold')
 
 "===== Special ====="
-call s:HL('MatchParen',     s:c.none,   s:c.b2, 'bold')
+call s:HL('MatchParen',     s:c.none,   s:c.b2)
 call s:HL('Conceal',        s:c.none,   s:c.none)
 call s:HL('Folded',         s:c.b5,     s:c.none, 'bold')
 call s:HL('ColorColumn',    s:c.none,   s:c.b3)
@@ -175,6 +175,6 @@ call s:HL('CmpItemKind',      s:c.cyan, s:c.none)
 call s:HL('CmpItemMenu',      s:c.b4,   s:c.none)
 
 "===== illuminate ====="
-hi! link LspReferenceTexta MatchParen
-hi! link LspReferenceWrite MatchParen
-hi! link LspReferenceRead MatchParen
+call s:HL('LspReferenceTexta',  s:c.none,   s:c.b1)
+hi! link LspReferenceWrite LspReferenceTexta
+hi! link LspReferenceRead LspReferenceTexta
